@@ -1,0 +1,25 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} {{Vproduct.product_name}} {% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 my-3">
+            <div class="row">
+                <img src="/media/{{Vproduct.image}}" class="border border-light" alt="" width="350px" height="auto">
+            </div>
+            <div class="row my-3">
+                <button class="btn btn-primary mx-3">Buy Now</button>
+                <button class="btn btn-info">Add to Cart</button>
+            </div>
+        </div>
+        <div class="col-md-8 my-3">
+            <h5> {{Vproduct.product_name}} </h5>
+            <h6><b>M.R.P: ₹{{Vproduct.price}}</b> (Inclusive of all taxes) </h6>
+            <hr>
+            <h6>About the Product</h6>
+            <p>{{Vproduct.desc}} </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
